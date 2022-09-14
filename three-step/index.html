@@ -1,0 +1,27 @@
+<div
+      style={{
+        backgroundSize: "100% auto",
+        backgroundRepeat: "no-repeat",
+      }}
+      className="flex flex-col w-full h-full gi zff"
+    >
+      <Header/>
+     
+        <div className="z-10 flex-grow w-10/12 mx-auto mt-10 space-y-3 center-section">
+       
+          <QueueNotification/>
+          {templateVariable.name||"name variable"}
+          <Announcements/>
+          {!queue && (
+            <div className="w-full space-y-12 rounded-md center-section__action-container">
+              <div
+                className={rooms.length ? "h-[0.01px] overflow-hidden" : ""}
+              >
+                <CsChatButton/>
+              </div>
+
+           
+            </div>
+          )}
+        </div>
+    </div>
