@@ -9,7 +9,7 @@
      
         <div className="z-10 flex-grow w-10/12 mx-auto mt-10 space-y-3 center-section">          
           <div className="text-center text-2xl text-primary-solid">
-          {templateVariable.name||"Chào bạn đến với dịch vụ chăm sóc khách hàng của chúng tôi,(Sửa text này trong setting)?"}
+          {templateVariable.title||"Chào bạn đến với dịch vụ chăm sóc khách hàng của chúng tôi,(Sửa text này trong setting)?"}
           </div>
           
           <div className="mx-auto flex justify-center items-center text-center">
@@ -34,12 +34,50 @@
             </div>
           )}
         </div>
-       
+        <div class="text-center mt-1 text-xl text-status-wait">{ templateVariable.company.parter ||"Các đối tác của tôi"}</div>
+       <div class="text-center text-white flex justify-center">
+        <div class="container p-6">
+          <div class="grid lg:grid-cols-6 md:grid-cols-3 gap-4">
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/111.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/112.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/114.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/115.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>
+            
+            {arr}
+          </div>
+        </div>
+      </div>
         <div class="md:flex md:justify-between p-2">
         <div class="mb-6 md:mb-0">
             <a href="https://flowbite.com/" class="flex items-center">
-                <img src="https://api.freelogodesign.org/assets/thumb/logo/22192360_400.png?t=637873802380000000" class="mr-3 h-8" alt="FlowBite Logo" />
-                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">My logo</span>
+                <img src={templateVariable.company.logo || "https://api.freelogodesign.org/assets/thumb/logo/22192360_400.png?t=637873802380000000"} class="mr-3 h-8" alt="FlowBite Logo" />
+                <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">{templateVariable.company.name || "My company"}</span>
             </a>
         </div>
         <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
@@ -78,7 +116,7 @@
             </div>
         </div>
     </div>
-    <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+   
     <div class="sm:flex sm:items-center sm:justify-between">
         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2022 <a href="https://flowbite.com/" class="hover:underline">My Company</a>. All Rights Reserved.
         </span>
