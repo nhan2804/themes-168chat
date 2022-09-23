@@ -8,11 +8,11 @@
       <Header/>
      
         <div className="z-10 flex-grow w-10/12 mx-auto mt-10 space-y-3 center-section">          
-          <div className="text-center text-2xl text-primary-solid">
+          <div className="text-2xl text-center text-primary-solid">
           {templateVariable.title||"Chào bạn đến với dịch vụ chăm sóc khách hàng của chúng tôi,(Sửa text này trong setting)?"}
           </div>
           
-          <div className="mx-auto flex justify-center items-center text-center">
+          <div className="flex items-center justify-center mx-auto text-center">
           <div>
          
 
@@ -27,13 +27,22 @@
               <div
                 className={rooms.length ? "h-[0.01px] overflow-hidden" : ""}
               >
-                <CsChatButton/>
+                <CsChatButton><button>nhan</button></CsChatButton>
               </div>
 
            
             </div>
           )}
         </div>
+         <div class="grid lg:grid-cols-6 md:grid-cols-3 gap-4">
+            <MapComponent data={arr}>{(data) => <div class="lg:mb-0 mb-6">
+              <img
+                src="https://mdbcdn.b-cdn.net/img/new/fluid/city/113.webp"
+                class="w-full rounded-md shadow-lg"
+              />
+            </div>}</MapComponent>
+
+          </div>
         <div class="text-center mt-1 text-xl text-status-wait">{ templateVariable.company.parter ||"Các đối tác của tôi"}</div>
        <div class="text-center text-white flex justify-center">
         <div class="container p-6">
@@ -69,9 +78,10 @@
               />
             </div>
             
-            {arr}
+           
           </div>
         </div>
+         
       </div>
         <div class="md:flex md:justify-between p-2">
         <div class="mb-6 md:mb-0">
