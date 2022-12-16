@@ -27,8 +27,8 @@
                 />
               </div>
               <div>
-                  <div className="font-bold line-clamp-1">{info.titleHello}</div>
-                  <div className="text-xs font-medium line-clamp-1">{info.descHello}</div>
+                  <div className="font-bold line-clamp-1">{info.name}</div>
+                  <div className="text-xs font-medium line-clamp-1">{info.titleHello}</div>
               </div>
             </div>
           
@@ -48,7 +48,7 @@
           <Announcements/>
           <HideWhenHaveQueue>
            <div className="space-y-[22px]">
-           <div className="font-semibold text-[#8D66FE] text-left" style={{color:info.primaryColor}}>{templateVariable.name||"Hello! If you have any question. I’m here to help."}</div>
+           <div className="font-semibold text-[#8D66FE] text-left" style={{color:info.primaryColor}}>{info.descHello||"Hello! If you have any question. I’m here to help."}</div>
             <div className="grid grid-cols-3 gap-6">
               <Facebook>
                 <div className="text-[#435EF2] flex flex-col items-center space-y-2">
@@ -143,7 +143,7 @@
                       borderColor:info.primaryColor
                     }}
                   >
-                  <div className="font-semibold">Chat with us</div>
+                  <div className="font-semibold">{t("common.chat_with_cs","New Conversation")}</div>
                     <svg
                       width="16"
                       height="15"
@@ -193,7 +193,7 @@
                     }}
                     
                   >
-                   {templateVariable.chat||"Chào bạn"}
+                  {data.text}
                   </button>}</InlineCreateOfflineMessageButton>
             </InlineCreateOfflineMessageSection>
           </ShowWhenHaveQueue>
